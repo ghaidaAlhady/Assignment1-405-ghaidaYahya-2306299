@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 - NBA Player Stats Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NBA Player Stats Dashboard</h1>
+            <button type="button" id="dark-mode-toggle">Toggle Dark Mode</button>
+        </header>
+
+        <div class="table-filters">
+            <input type="text" id="search" placeholder="Search players..." aria-label="Search players">
+            <select id="team-filter" aria-label="Filter by team">
+                <option value="all">All</option>
+            </select>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="player-stats">
+                <thead>
+                    <tr>
+                        <th data-sort="name" tabindex="0">Name</th>
+                        <th data-sort="team" tabindex="0">Team</th>
+                        <th data-sort="points" tabindex="0">Points</th>
+                        <th data-sort="rebounds" tabindex="0">Rebounds</th>
+                        <th data-sort="assists" tabindex="0">Assists</th>
+                    </tr>
+                </thead>
+                <tbody id="player-rows"></tbody>
+            </table>
+        </div>
+        <p id="result-message" aria-live="polite"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
